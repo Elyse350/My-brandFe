@@ -81,7 +81,10 @@ function EditBlogData(blogID){
 
        console.log(tokenCookie);
     //const createdAT = new Date().toLocaleDateString('en-GB');
-
+    if(!tokenCookie){
+        tokenCookie = localStorage.getItem('token');
+        console.log(tokenCookie);
+    }
     let newBlog = {
         title: title.value, 
   /*       snippet: snippet.value,  */
@@ -107,6 +110,7 @@ function EditBlogData(blogID){
             body: JSON.stringify(newBlog)
     })
     .then(response => {
+        console.log(response);
         if(!response.ok) {
             alert('error')
 
