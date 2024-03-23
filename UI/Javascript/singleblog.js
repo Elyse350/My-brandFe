@@ -161,14 +161,7 @@ reactionButton.addEventListener('click', function () {
         .then(response => {
             if(!response.ok) {
 
-                notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>An error occured, Try again`;
-                setTimeout(function() {
-                    notificationsBar.classList.add('visible');
-            
-                    setTimeout(function() {
-                        notificationsBar.classList.remove('visible');
-                    }, 2000);
-                }, 1000); 
+                alert('error')
 
             }
             return response.json();
@@ -177,16 +170,6 @@ reactionButton.addEventListener('click', function () {
 
             checkUserLikeStatus(data.blog.likes, decodedPayload.id);
 
-
-
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined circle" id="checkcircle">check_circle</span>${data.message}`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-            
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000); 
         console.log('Message sent:', data.blog.likes);
         })
         .catch(error => {
@@ -196,15 +179,7 @@ reactionButton.addEventListener('click', function () {
 
     } else{
 
-        notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>You have to be Logged in`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000); 
-
+              alert('error')
     }
 
 })
