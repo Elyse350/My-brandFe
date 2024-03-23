@@ -25,7 +25,7 @@ myForm.addEventListener('submit', async function(event){
             password: passwordValue
         };
 
-        fetch('http://localhost:3000/api/auth/signup', {
+        fetch('https://my-brand-production-b23d.up.railway.app/api/auth/signup', {
             method: 'POST',
             headers: {
                 'content-Type' : 'application/json'
