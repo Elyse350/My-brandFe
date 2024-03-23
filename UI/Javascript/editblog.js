@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         createBlogButton.textContent = 'Edit'
 
-        fetch(`http://localhost:3000/api/blog/blogs/${blogID}`)
+        fetch(`https://my-brand-production-b23d.up.railway.app/api/blog/blogs/${blogID}`)
         .then(response => response.json())
         .then(blogDetails => {
             // Process the fetched blog details and display them
@@ -97,7 +97,7 @@ function EditBlogData(blogID){
 
 
 
-    fetch(`http://localhost:3000/api/blog/blogs/${blogID}`, {
+    fetch(`https://my-brand-production-b23d.up.railway.app/api/blog/blogs/${blogID}`, {
             method: 'PUT',
             headers: {
                 'Authorization': `Bearer ${tokenCookie}`,
