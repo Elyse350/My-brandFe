@@ -107,15 +107,7 @@ function EditBlogData(blogID){
     })
     .then(response => {
         if(!response.ok) {
-
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined circle error">error</span>An error Occured`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000); 
+            alert('error')
 
         }
         return response.json();
@@ -124,15 +116,7 @@ function EditBlogData(blogID){
 
         if(data.status === 'failed'){
 
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined circle error">error</span>All Fields are required`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000); 
-
+              alert('error')
         } else {
             title.value = '';    
         /*     snippet.value = '';     */
@@ -148,15 +132,6 @@ function EditBlogData(blogID){
         console.log('Message sent:', data);
     })
     .catch(error => {
-
-        notificationsBar.innerHTML = `<span class="material-symbols-outlined circle error">error</span>An error`;
-        setTimeout(function() {
-            notificationsBar.classList.add('visible');
-    
-            setTimeout(function() {
-                notificationsBar.classList.remove('visible');
-            }, 2000);
-        }, 1000); 
 
         console.error('There was a problem sending the message:', error);
     });
