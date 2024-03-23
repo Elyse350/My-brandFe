@@ -1,4 +1,4 @@
-/* (function () {
+ (function () {
     const cohorts = "interestCohort";
     const documentProto = Document.prototype;
     const flocSupported = cohorts in documentProto;
@@ -19,4 +19,4 @@
       };
       Object.defineProperty(documentProto, cohorts, config);
     }
-  })(); */
+  })();
