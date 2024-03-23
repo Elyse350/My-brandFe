@@ -35,16 +35,7 @@ function validateInput(name, comment){
     
 
     if(nameValue.length < 2 || commentValue.length < 3){
-
-        notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>Provide valid details`;
-        setTimeout(function() {
-            notificationsBar.classList.add('visible');
-    
-            setTimeout(function() {
-                notificationsBar.classList.remove('visible');
-            }, 2000);
-        }, 1000);
-        
+            alert('error')
     } else if(nameValue.length > 2 && commentValue.length > 3){
 
         sendComment(nameValue, commentValue);
@@ -65,15 +56,6 @@ function sendComment(name, comment){
     .then(response => {
         if (!response.ok) {
 
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>An error occured!!`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000); 
-
             throw new Error('Network response was not ok');
         }
         return response.json();
@@ -86,18 +68,6 @@ function sendComment(name, comment){
 
 
         displayComments();
-
-
-        notificationsBar.innerHTML = `<span class="material-symbols-outlined cirle" id="checkcircle">check_circle</span>Comment sent`;
-        document.getElementById('checkcircle').style.color = 'green';
-
-        setTimeout(function() {
-            notificationsBar.classList.add('visible');
-        
-            setTimeout(function() {
-                notificationsBar.classList.remove('visible');
-            }, 2000);
-        }, 1000);
 
         
         console.log('Message sent:', data);
