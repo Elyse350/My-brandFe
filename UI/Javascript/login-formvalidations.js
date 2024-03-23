@@ -52,6 +52,7 @@ myForm.addEventListener('submit', async function(event){
                 var now = new Date();
                 var expires = new Date(now.getTime() + expiresInMilliseconds);
                 document.cookie = `jwt=${data.token}; path=/; Max-Age=${expiresInMilliseconds / 1000}; expires=${expires.toUTCString()}`;
+                localStorage.setItem('token', data.token);
 
                 function getCookie(name) {
                     const cookieString = document.cookie;
