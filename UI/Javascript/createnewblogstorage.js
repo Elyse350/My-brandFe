@@ -52,10 +52,10 @@ function storeBlogData(){
 
     let newBlog = {
         title: blogTitle.value, 
-        snippet: blogSnippet.value, 
+       /*  snippet: blogSnippet.value,  */
         category: blogCategory.value, 
         imageUrl: blogImage.value,
-        author: blogAuthor.value,
+   /*      author: blogAuthor.value, */
         body: blogBody.value ,
         //comments: JSON.parse(localStorage.getItem('editBlogComments')) || []
     }
