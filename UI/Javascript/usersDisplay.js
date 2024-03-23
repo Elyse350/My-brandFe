@@ -87,26 +87,9 @@ function deleteUser(userId){
         .then(data => {
 
             displayUserAccounts(data.users);
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined" id="checkcircle">check_circle</span>User Deleted`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000);
             console.log(data);
         })
         .catch(error => {
-
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>An error occured, Try again`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000);
 
             console.error('There was a problem sending the message:', error);
         });
@@ -130,26 +113,9 @@ function editUserROle(userId){
         .then(data => {
 
             displayUserAccounts(data.users);
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined" id="checkcircle">check_circle</span>User Role Updated`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000);
             console.log(data);
         })
         .catch(error => {
-
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>An error occured, Try again`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000);
 
             console.error('There was a problem sending the message:', error);
         });
