@@ -29,14 +29,7 @@ myForm.addEventListener('submit', async function(event){
         .then(response => {
             if(!response.ok) {
 
-                notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>An error occured, Try again`;
-                setTimeout(function() {
-                    notificationsBar.classList.add('visible');
-            
-                    setTimeout(function() {
-                        notificationsBar.classList.remove('visible');
-                    }, 2000);
-                }, 1000); 
+                  alert('error')
 
             }
             return response.json();
@@ -45,36 +38,14 @@ myForm.addEventListener('submit', async function(event){
 
             if(data.error === 'An error occurred while logging in.'){
 
-                notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>Email not registered`;
-                setTimeout(function() {
-                    notificationsBar.classList.add('visible');
-            
-                    setTimeout(function() {
-                        notificationsBar.classList.remove('visible');
-                    }, 2000);
-                }, 1000); 
+                  alert('error')
 
             } else if(data.status === 'failed'){
 
-                notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>Enter a valid email`;
-                setTimeout(function() {
-                    notificationsBar.classList.add('visible');
-            
-                    setTimeout(function() {
-                        notificationsBar.classList.remove('visible');
-                    }, 2000);
-                }, 1000); 
+                  alert('error')
 
             } else if(data.error === 'Invalid credentials. Please check your email and password.'){
-
-                notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>Incorrect password`;
-                setTimeout(function() {
-                    notificationsBar.classList.add('visible');
-            
-                    setTimeout(function() {
-                        notificationsBar.classList.remove('visible');
-                    }, 2000);
-                }, 1000); 
+                  alert('error')
 
             } else{
                 var expiresInMilliseconds = 3 * 24 * 60 * 60 * 1000;
@@ -126,15 +97,6 @@ myForm.addEventListener('submit', async function(event){
             console.log('Message sent:', data);
         })
         .catch(error => {
-
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>Error logging in, Try again`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000); 
 
             console.error('There was a problem sending the message:', error);
         });
