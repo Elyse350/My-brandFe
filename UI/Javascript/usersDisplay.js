@@ -18,7 +18,7 @@ var tokenCookie = getCookie('jwt');
 
 
 //Getting all the users
-fetch('http://localhost:3000/api/auth/users', {
+fetch('https://my-brand-production-b23d.up.railway.app/api/auth/users', {
 headers: {
     'Authorization': `Bearer ${tokenCookie}`,
     'Content-Type': 'application/json'
@@ -74,7 +74,7 @@ function displayUserAccounts(users) {
 
 function deleteUser(userId){
 
-        fetch(`http://localhost:3000/api/auth/users/${userId}`, {
+        fetch(`https://my-brand-production-b23d.up.railway.app/api/auth/users/${userId}`, {
         method: 'delete',
         headers: {
             'Authorization': `Bearer ${tokenCookie}`,
@@ -117,7 +117,7 @@ function deleteUser(userId){
 
 function editUserROle(userId){
 
-        fetch(`http://localhost:3000/api/auth/users/${userId}`, {
+        fetch(`https://my-brand-production-b23d.up.railway.app/api/auth/users/${userId}`, {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${tokenCookie}`,
