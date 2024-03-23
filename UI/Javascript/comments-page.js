@@ -55,7 +55,7 @@ function validateInput(name, comment){
 function sendComment(name, comment){
     console.log(name, comment);
 
-    fetch(`http://localhost:3000/api/blogs/${blogID}/comments`, {
+    fetch(`https://my-brand-production-b23d.up.railway.app/api/blogs/${blogID}/comments`, {
     method: 'POST',
     headers: {
         'Content-Type' : 'application/json'
@@ -161,7 +161,7 @@ function sendComment(name, comment){
 function displayComments (){
 
 
-    fetch(`http://localhost:3000/api/blog/blogs/${blogID}`)
+    fetch(`https://my-brand-production-b23d.up.railway.app/api/blog/blogs/${blogID}`)
     .then(response => {
         // Process the fetched blog details and display them
         if (!response.ok) {
