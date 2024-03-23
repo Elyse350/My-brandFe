@@ -50,7 +50,7 @@ function displayUserMessages(){
     //console.log(tokenCookie);
 
 
-    fetch('http://localhost:3000/api/usermessages', {
+    fetch('https://my-brand-production-b23d.up.railway.app/api/usermessages', {
         headers: {
             'Authorization': `Bearer ${tokenCookie}`,
             'Content-Type': 'application/json'
@@ -130,7 +130,7 @@ function displayBlogsAdmin(){
     //console.log(tokenCookie);
 
 
-    fetch('http://localhost:3000/api/blog/blogs', {
+    fetch('https://my-brand-production-b23d.up.railway.app/api/blog/blogs', {
         headers: {
             'Authorization': `Bearer ${tokenCookie}`,
             'Content-Type': 'application/json'
@@ -190,7 +190,7 @@ function displayBlogsAdmin(){
                 // Retrieve the ID of the clicked blog
                 let clickedBlogID = blogDiv.dataset.blogId;
 
-            fetch(`http://localhost:3000/api/blog/blogs/${clickedBlogID}`, {
+            fetch(`https://my-brand-production-b23d.up.railway.app/api/blog/blogs/${clickedBlogID}`, {
             method: 'delete',
             headers: {
                 'Authorization': `Bearer ${tokenCookie}`,
