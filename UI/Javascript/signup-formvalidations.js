@@ -35,14 +35,7 @@ myForm.addEventListener('submit', async function(event){
         .then(response => {
             if(!response.ok) {
 
-                notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>An error occured, Try again`;
-                setTimeout(function() {
-                    notificationsBar.classList.add('visible');
-            
-                    setTimeout(function() {
-                        notificationsBar.classList.remove('visible');
-                    }, 2000);
-                }, 1000); 
+                  alert('error')
 
             }
             return response.json();
@@ -51,25 +44,11 @@ myForm.addEventListener('submit', async function(event){
 
             if(data.status === 'failed'){
 
-                notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>Provide valid email`;
-                setTimeout(function() {
-                    notificationsBar.classList.add('visible');
-            
-                    setTimeout(function() {
-                        notificationsBar.classList.remove('visible');
-                    }, 2000);
-                }, 1000); 
+                  alert('error')
 
             } else if(data.error === 'Email already exists'){
 
-                notificationsBar.innerHTML = `<span class="material-symbols-outlined circle error">error</span>Email already exists`;
-                setTimeout(function() {
-                    notificationsBar.classList.add('visible');
-            
-                    setTimeout(function() {
-                        notificationsBar.classList.remove('visible');
-                    }, 2000);
-                }, 1000);
+                   alert('error')
 
             } else if(data.user.email === emailValue){
 
@@ -78,28 +57,10 @@ myForm.addEventListener('submit', async function(event){
                 document.getElementById('email').value = '';
                 document.getElementById('password').value = '';
 
-
-                notificationsBar.innerHTML = `<span class="material-symbols-outlined cirle" id="checkcircle">check_circle</span>Account Created`;
-                setTimeout(function() {
-                    notificationsBar.classList.add('visible');
-            
-                    setTimeout(function() {
-                        notificationsBar.classList.remove('visible');
-                    }, 2000);
-                }, 1000);
                 }
             console.log('Message sent:', data);
         })
         .catch(error => {
-
-            notificationsBar.innerHTML = `<span class="material-symbols-outlined circle">error</span>An error occured, Try again`;
-            setTimeout(function() {
-                notificationsBar.classList.add('visible');
-        
-                setTimeout(function() {
-                    notificationsBar.classList.remove('visible');
-                }, 2000);
-            }, 1000); 
 
             console.error('There was a problem sending the message:', error);
         });
