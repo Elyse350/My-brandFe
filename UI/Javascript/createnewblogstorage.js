@@ -5,10 +5,10 @@ let actionButtonValue = createBlogButton.textContent;
 let notificationsBar = document.getElementById('notis');
 
 let blogTitle = document.getElementById('title');
-let blogSnippet = document.getElementById('snippet');
+/* let blogSnippet = document.getElementById('snippet'); */
 let blogCategory = document.getElementById('category');
 let blogImage = document.getElementById('img');
-let blogAuthor = document.getElementById('author');
+/* let blogAuthor = document.getElementById('author'); */
 let blogBody = document.getElementById('body');
 
 // Parse the query string of the URL
