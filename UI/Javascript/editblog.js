@@ -1,9 +1,9 @@
 let createBlogButton = document.querySelector('.btnpost');
 let title = document.getElementById('title');
-let snippet = document.getElementById('snippet');
+/* let snippet = document.getElementById('snippet'); */
 let category = document.getElementById('category');
 let image = document.getElementById('img');
-let author = document.getElementById('author');
+/* let author = document.getElementById('author'); */
 let body = document.getElementById('body');
 
 let notificationsBar = document.getElementById('notis');
@@ -33,10 +33,10 @@ document.addEventListener("DOMContentLoaded", function() {
             // console.log(blog);
 
             title.value = blog.title;
-            snippet.value = blog.snippet;
+      /*       snippet.value = blog.snippet; */
             category.value = blog.category;
             image.value = blog.imageUrl;
-            author.value = blog.author;
+         /*    author.value = blog.author; */
             body.value = blog.body;
 
         })
@@ -83,10 +83,10 @@ function EditBlogData(blogID){
 
     let newBlog = {
         title: title.value, 
-        snippet: snippet.value, 
+  /*       snippet: snippet.value,  */
         category: category.value, 
         imageUrl: image.value,
-        author: author.value,
+/*         author: author.value, */
         body: body.value,
         //comments: JSON.parse(localStorage.getItem('editBlogComments')) || []
     }
@@ -135,10 +135,10 @@ function EditBlogData(blogID){
 
         } else {
             title.value = '';    
-            snippet.value = '';    
+        /*     snippet.value = '';     */
             category.value = '';    
             image.value = '';    
-            author.value = '';    
+        /*     author.value = '';     */
             body.value = '';
             //localStorage.removeItem('editBlogComments');
             
