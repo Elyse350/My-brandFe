@@ -10,7 +10,7 @@ function displayOnBlogsPage(){
 
 
 
-    fetch('http://localhost:3000/api/blog/blogs')
+    fetch('https://my-brand-production-b23d.up.railway.app/api/blog/blogs')
     .then(data => {
         return data.json();
     })
