@@ -66,7 +66,7 @@ function storeBlogData(){
 
 
 
-    fetch('http://localhost:3000/api/blog/createnew', {
+    fetch('https://my-brand-production-b23d.up.railway.app/api/blog/createnew', {
             method: 'POST',
             headers: {
                 'Authorization': `Bearer ${tokenCookie}`,
