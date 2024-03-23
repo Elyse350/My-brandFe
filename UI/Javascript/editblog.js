@@ -52,6 +52,7 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
     
         if(blogID){
+            console.log(blogID);
             EditBlogData(blogID);
         }
     })
@@ -78,7 +79,7 @@ function EditBlogData(blogID){
 
     var tokenCookie = getCookie('jwt');
 
-
+       console.log(tokenCookie);
     //const createdAT = new Date().toLocaleDateString('en-GB');
 
     let newBlog = {
